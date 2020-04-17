@@ -9,12 +9,14 @@ directions = {'^': (0, 1),
               '>': (1, 0),
               '<': (-1, 0)}
 
+
 def compute_location(x, y):
     location = (x, y)
     if location not in grid:
         grid[location] = 1
     else:
         grid[location] += 1
+
 
 for i, move in enumerate(moves):
     if i % 2 == 0:
@@ -27,4 +29,3 @@ for i, move in enumerate(moves):
         compute_location(rx, ry)
 
 print(len(grid.values()))
-

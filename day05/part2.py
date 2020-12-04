@@ -1,6 +1,3 @@
-from collections import Counter
-
-
 class StringChecker:
     def __init__(self, string):
         self.string = string

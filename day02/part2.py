@@ -2,7 +2,7 @@ with open('input.txt', 'r') as fp:
     dimensions = [tuple(map(int, line.strip().split('x'))) for line in fp.readlines()]
 
 total_feet = 0
-for l, w, h in dimensions:
+for l, w, h in dimensions:  # noqa: E741
     sides = sorted([l, w, h])
     ribbon = (2 * sides[0]) + (2 * sides[1])
     ribbon += l * w * h
